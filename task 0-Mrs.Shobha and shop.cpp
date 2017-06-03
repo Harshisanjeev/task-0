@@ -52,20 +52,20 @@ int main()
    }
   
   
-  vector <int> arr1(size);
-  int x=max;int count=0;
+ 
+  int x=max;int pos;
   for(k=0;k<size;k++)
   {
       if(arr[k]>=m && arr[k]<=x)             //executing Kamal's method
       {
           x=arr[k];
-          arr1[count++]=k;
+          pos=k;
           
       }
   }
   cout<<endl;
   
-  second[arr1[count-1]]=second[arr1[count-1]]-m;
+  second[pos]=second[pos]-m;
   
   cout<< "Kamal's solution: "<<endl;
   for(j=0;j<size;j++)                       //displaying Kamal's solution 
@@ -75,21 +75,21 @@ int main()
    
    cout<<endl;
    
-   vector <int> arr2(size);
-  int count1=0;
+   
+  int pos2;
   for(k=0;k<size;k++)
   {
       if(arr[k]>=m && arr[k]>=x)           //executing Jasmine's method
       {
           x=arr[k];
-          arr2[count1++]=k;
+          pos2=k;
           
       }
   }
   
-  int size3=arr2.size();
+ 
   
-  arr[arr2[count1-1]]=arr[arr2[count1-1]]-m;
+  arr[pos2]=arr[pos2]-m;
   
   cout<< "Jasmine's solution:  "<<endl;
   for(j=0;j<size;j++)                       //displaying Jasmine's solution 
